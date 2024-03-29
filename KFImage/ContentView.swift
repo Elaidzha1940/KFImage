@@ -11,11 +11,30 @@ import SwiftUI
 import Kingfisher
 
 struct ContentView: View {
-    @State private var progress: Int32 = 0
+    //@State private var progress: Int32 = 0
+    
+    let url: String
+    var contentMode: Kingfisher.ContentMode = .fill
     
     var body: some View {
         
-        KFImage(URL(string: "https://picsum.photos/seed/picsum/200/300"))
+        VStack {
+            KFImage(URL(string: url))
+                .placeholder {
+                    Color.blue
+                }
+                .resizable()
+                .onProgress ({ receivedSize, totalSize in
+                    //
+                })
+                .onSuccess ({ result in
+                    //
+                })
+                .onFailure { error in
+                    //
+                }
+                .aspectRatio(contentMode: contentMode)
+        }
         
 //        ZStack {
 //            KFImage(URL(string: "https://images.unsplash.com/photo-1694952751871-4c60120ec470?auto=format&fit=crop&q=60&w=800&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIyMnxKcGc2S2lkbC1Ia3x8ZW58MHx8fHx8"))
@@ -45,5 +64,19 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(url: "https://picsum.photos/id/737/200/300")
 }
+
+
+//// Use `KF` builder
+//KF.url(url)
+//  .placeholder(placeholderImage)
+//  .setProcessor(processor)
+//  .loadDiskFileSynchronously()
+//  .cacheMemoryOnly()
+//  .fade(duration: 0.25)
+//  .lowDataModeSource(.network(lowResolutionURL))
+//  .onProgress { receivedSize, totalSize in  }
+//  .onSuccess { result in  }
+//  .onFailure { error in }
+//  .set(to: imageView)
