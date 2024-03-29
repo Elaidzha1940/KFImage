@@ -8,6 +8,26 @@ https://github.com/onevcat/Kingfisher.git
 ````
 --------
 
+If later you want to switch to SwiftUI, just change the KF above to KFImage, and you've done:
+--------
+````ruby
+struct ContentView: View {
+    var body: some View {
+        KFImage.url(url)
+          .placeholder(placeholderImage)
+          .setProcessor(processor)
+          .loadDiskFileSynchronously()
+          .cacheMemoryOnly()
+          .fade(duration: 0.25)
+          .lowDataModeSource(.network(lowResolutionURL))
+          .onProgress { receivedSize, totalSize in  }
+          .onSuccess { result in  }
+          .onFailure { error in }
+    }
+}
+````
+---------
+
 https://github.com/Elaidzha1940/KFImage/assets/64445918/eeb69024-1b7a-4379-a9da-605b2d4168ae
 
 --------
