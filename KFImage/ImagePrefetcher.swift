@@ -22,7 +22,7 @@ final class ImagePrefetcher {
         prefetchers[urls]?.start()
     }
     
-    func stopPrefetcher() {
+    func stopPrefetcher(urls: [URL]) {
         prefetchers[urls]?.stop()
     }
 }

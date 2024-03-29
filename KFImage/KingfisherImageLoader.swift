@@ -23,7 +23,6 @@ struct KingfisherImageLoader: View {
                 .placeholder {
                     Color.blue
                 }
-                .resizable()
                 .onProgress ({ receivedSize, totalSize in
                     //
                 })
@@ -33,8 +32,9 @@ struct KingfisherImageLoader: View {
                 .onFailure { error in
                     //
                 }
-               //.cacheMemoryOnly()
-               //.lowDataModeSource(.network(lowResolutionURL))
+                //.resizable()
+                //.cacheMemoryOnly()
+                //.lowDataModeSource(.network(lowResolutionURL))
                 .aspectRatio(contentMode: contentMode)
         }
         
