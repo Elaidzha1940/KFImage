@@ -13,7 +13,7 @@ import SwiftUI
 struct KFImageApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            KingfisherImageLoader(url: "")
         }
     }
 }

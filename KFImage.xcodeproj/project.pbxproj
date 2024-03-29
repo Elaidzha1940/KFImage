@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		E432156E2AE2C93600731E1E /* KFImageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E432156D2AE2C93600731E1E /* KFImageApp.swift */; };
-		E43215702AE2C93600731E1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E432156F2AE2C93600731E1E /* ContentView.swift */; };
+		E43215702AE2C93600731E1E /* KingfisherImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E432156F2AE2C93600731E1E /* KingfisherImageLoader.swift */; };
 		E43215722AE2C93700731E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43215712AE2C93700731E1E /* Assets.xcassets */; };
 		E43215752AE2C93700731E1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E43215742AE2C93700731E1E /* Preview Assets.xcassets */; };
 		E48A241A2BB706FB0093255C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E48A24192BB706FB0093255C /* Kingfisher */; };
+		E48A241C2BB710890093255C /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A241B2BB710890093255C /* ImageLoader.swift */; };
+		E48A241E2BB711A60093255C /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48A241D2BB711A60093255C /* ImagePrefetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E432156A2AE2C93600731E1E /* KFImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KFImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E432156D2AE2C93600731E1E /* KFImageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFImageApp.swift; sourceTree = "<group>"; };
-		E432156F2AE2C93600731E1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E432156F2AE2C93600731E1E /* KingfisherImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherImageLoader.swift; sourceTree = "<group>"; };
 		E43215712AE2C93700731E1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E43215742AE2C93700731E1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E48A241B2BB710890093255C /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		E48A241D2BB711A60093255C /* ImagePrefetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePrefetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				E432156D2AE2C93600731E1E /* KFImageApp.swift */,
-				E432156F2AE2C93600731E1E /* ContentView.swift */,
+				E48A241D2BB711A60093255C /* ImagePrefetcher.swift */,
+				E432156F2AE2C93600731E1E /* KingfisherImageLoader.swift */,
+				E48A241B2BB710890093255C /* ImageLoader.swift */,
 				E43215712AE2C93700731E1E /* Assets.xcassets */,
 				E43215732AE2C93700731E1E /* Preview Content */,
 			);
@@ -145,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E43215702AE2C93600731E1E /* ContentView.swift in Sources */,
+				E43215702AE2C93600731E1E /* KingfisherImageLoader.swift in Sources */,
 				E432156E2AE2C93600731E1E /* KFImageApp.swift in Sources */,
+				E48A241C2BB710890093255C /* ImageLoader.swift in Sources */,
+				E48A241E2BB711A60093255C /* ImagePrefetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
